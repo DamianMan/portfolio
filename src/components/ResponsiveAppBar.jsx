@@ -11,6 +11,7 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import MenuButton from "./MenuButton";
 import { styled } from "@mui/material";
+import logo from "./assets/logo.png";
 
 function ResponsiveAppBar({ toogleTheme, isLightMode }) {
   const trigger = useScrollTrigger({
@@ -97,7 +98,7 @@ function ResponsiveAppBar({ toogleTheme, isLightMode }) {
               mr: 1,
             }}
           /> */}
-          <Image src={"././src/assets/logo.png"} />
+          <Image src={logo} />
           Manzillo
         </TitleName>
       </CustomBox>
