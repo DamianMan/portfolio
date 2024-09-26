@@ -59,6 +59,7 @@ const ContainerIntro = styled(Box)(({ theme }) => ({
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
   backgroundPosition: "100%",
+  ...theme.mixins.toolbar,
 
   [theme.breakpoints.up("sm")]: {
     display: "flex",
