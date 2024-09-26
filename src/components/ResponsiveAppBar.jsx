@@ -68,13 +68,15 @@ function ResponsiveAppBar({ toogleTheme, isLightMode }) {
     <AppBar
       position="fixed"
       style={{
-        background: "transparent",
+        background: `${
+          !trigger ? "none" : isLightMode ? "aliceblue" : `${grey[900]}`
+        }`,
         boxShadow: `${!trigger ? "none" : "1px 1px 3px grey"}`,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "row",
-
+        position: "fixed",
         transition: "0.5s ease-out",
       }}
     >
