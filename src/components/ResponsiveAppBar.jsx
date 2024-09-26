@@ -11,7 +11,7 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import MenuButton from "./MenuButton";
 import { styled } from "@mui/material";
-import logo from "./assets/logo.png";
+import logo from "./../assets/logo.png";
 
 function ResponsiveAppBar({ toogleTheme, isLightMode }) {
   const trigger = useScrollTrigger({
