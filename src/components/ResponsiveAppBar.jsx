@@ -97,7 +97,7 @@ function ResponsiveAppBar({ toogleTheme, isLightMode }) {
               mr: 1,
             }}
           /> */}
-          <Image src={"./src/assets/logo.png"} />
+          <Image src={"././src/assets/logo.png"} />
           Manzillo
         </TitleName>
       </CustomBox>
