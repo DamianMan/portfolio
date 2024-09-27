@@ -6,8 +6,8 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const Title = styled(Typography)(({ theme }) => ({
-  letterSpacing: 1,
-  textAlign: "start",
+  letterSpacing: 3,
+  textAlign: "center",
   fontWeight: 100,
   color: "#00bf63",
   fontFamily: "Roboto, san-serif",
@@ -15,11 +15,12 @@ const Title = styled(Typography)(({ theme }) => ({
   fontSize: 30,
   borderRadius: 10,
   width: "25%",
-  paddingLeft: 5,
+  padding: "0px 10px",
+
   margin: "30px 10px",
   [theme.breakpoints.up("sm")]: {
     letterSpacing: 7,
-    width: "15%",
+    width: "10%",
   },
 }));
 
@@ -45,7 +46,10 @@ function SkillsSection(props) {
   const isInView = useInView(container, { once: true });
   return (
     <Slide ref={container} in={isInView} direction="left" timeout={3000}>
-      <Stack id="skills" sx={{ display: "flex", flexDirection: "column" }}>
+      <Stack
+        id="skills"
+        sx={{ display: "flex", flexDirection: "column", width: "100%" }}
+      >
         <Title>Skills</Title>
         <Box>
           <Slide in={isInView} timeout={3000} direction="right">

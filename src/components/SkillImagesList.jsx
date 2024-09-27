@@ -59,9 +59,11 @@ export default function SkillImageList() {
                 backdropFilter: "blur(5px)",
                 WebkitBackdropFilter: "blur(5px)", // For Safari support
                 border: "1px solid rgba(255, 255, 255, 0.3)",
-                borderRadius: 3,
                 margin: "0px 0px",
                 padding: "20px 0px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
               <Image

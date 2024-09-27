@@ -11,6 +11,7 @@ import HomePageBox from "./components/HomePageBox";
 import HomePageBtn from "./components/HomePageBtn";
 import SkillsSection from "./components/SkillsSection";
 import "./App.css";
+import ProjectsSection from "./components/ProjectsSection";
 const theme = createTheme({
   typography: {
     fontFamily: "Roboto, san-serif",
@@ -24,8 +25,7 @@ const Main = styled("div")(({ theme }) => ({
   padding: 0,
   margin: 0,
   display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+
   flexDirection: "column",
 }));
 
@@ -53,7 +53,7 @@ const Blank = styled(Box)(({ theme }) => ({
   height: "10%",
   [theme.breakpoints.up("sm")]: {
     background: "transparent",
-    margin: 100,
+    margin: 80,
     height: "10%",
   },
 }));
@@ -107,7 +107,14 @@ function App() {
       >
         <ResponsiveAppBar toogleTheme={toogleTheme} isLightMode={isLightMode} />
         {loading ? (
-          <CircularProgress size={80} sx={{ color: "limegreen" }} />
+          <CircularProgress
+            size={80}
+            sx={{
+              color: "limegreen",
+              alignSelf: "center",
+              marginTop: { xs: "70%", md: "25%", lg: "25%" },
+            }}
+          />
         ) : (
           <>
             <Fade in={true} timeout={2000}>
@@ -126,6 +133,8 @@ function App() {
 
             <Blank />
             <SkillsSection />
+            <Blank />
+            <ProjectsSection />
           </>
         )}
       </Main>
