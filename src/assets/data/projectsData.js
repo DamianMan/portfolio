@@ -1,7 +1,7 @@
-const cilentodamare = require("../../assets/cilentodamare.png");
-const rubenboats = require("../../assets/rubenboats.png");
-const freebuys = require("../../assets/freebuys.png");
-const bluesoul = require("../../assets/bluesoul.png");
+import cilentodamare from "../../assets/cilentodamare.png";
+import rubenboats from "../../assets/rubenboats.png";
+import freebuys from "../../assets/freebuys.png";
+import bluesoul from "../../assets/bluesoul.png";
 
 const projectsData = [
   {
