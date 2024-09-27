@@ -58,6 +58,7 @@ const Containers = styled(Box)(({ theme }) => ({
   },
 }));
 function HomePageBox({ isLightMode }) {
+  console.log(meAi);
   return (
     <Main>
       <Fade in={true} timeout={4000}>
