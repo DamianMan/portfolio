@@ -12,10 +12,10 @@ import SegmentTwoToneIcon from "@mui/icons-material/SegmentTwoTone";
 import { grey } from "@mui/material/colors";
 
 const actions = [
-  { icon: <BlurLinearIcon />, name: "Skills" },
-  { icon: <AutoAwesomeMotionIcon />, name: "Projects" },
-  { icon: <ConnectWithoutContactIcon />, name: "Connect With Me" },
-  { icon: <PictureAsPdfIcon />, name: "Resume" },
+  { icon: <BlurLinearIcon />, name: "Skills", href: "#skills" },
+  { icon: <AutoAwesomeMotionIcon />, name: "Projects", href: "#" },
+  { icon: <ConnectWithoutContactIcon />, name: "Connect With Me", href: "#" },
+  { icon: <PictureAsPdfIcon />, name: "Resume", href: "#" },
 ];
 
 export default function OpenIconSpeedDial() {
@@ -62,6 +62,7 @@ export default function OpenIconSpeedDial() {
           key={action.name}
           icon={action.icon}
           tooltipTitle={action.name}
+          href={action.href}
         />
       ))}
     </SpeedDial>

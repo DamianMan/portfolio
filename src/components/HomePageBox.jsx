@@ -30,6 +30,7 @@ const FullStackText = styled(Typography)(({ theme }) => ({
   fontFamily: "Montserrat",
   fontWeight: 500,
   color: "grey",
+  textAlign: "left",
   [theme.breakpoints.up("sm")]: {
     fontSize: 50,
   },
@@ -61,8 +62,8 @@ function HomePageBox({ isLightMode }) {
     <Main>
       <Fade in={true} timeout={4000}>
         <Containers>
-          <FullStackText align="left">Junior</FullStackText>
-          <FullStackText align="left">Full Stack Developer</FullStackText>
+          <FullStackText>Junior Full </FullStackText>
+          <FullStackText>Stack Developer</FullStackText>
         </Containers>
       </Fade>
       <Fade in={true} timeout={6000}>

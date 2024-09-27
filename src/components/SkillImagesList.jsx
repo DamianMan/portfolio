@@ -9,7 +9,6 @@ import { useMediaQuery } from "@mui/material"; // Import useMediaQuery
 // Define breakpoints for screen sizes
 
 export default function SkillImageList() {
-  const ref = useRef();
   const container = useRef();
   const isInView = useInView(container, { once: true });
 
@@ -37,7 +36,7 @@ export default function SkillImageList() {
       rowHeight={100}
       sx={{
         padding: "10px 10px",
-        boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+        boxShadow: "0 4px 30px grey",
         borderRadius: "16px",
         background: "transparent",
       }}
