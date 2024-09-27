@@ -1,4 +1,4 @@
-import { Fade, styled } from "@mui/material";
+import { Button, Fade, styled } from "@mui/material";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -8,6 +8,9 @@ import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import { grey } from "@mui/material/colors";
 import { useState, useEffect } from "react";
 import HomePageBox from "./components/HomePageBox";
+import HomePageBtn from "./components/HomePageBtn";
+import SkillsSection from "./components/SkillsSection";
+import "./App.css";
 const theme = createTheme({
   typography: {
     fontFamily: "Roboto, san-serif",
@@ -16,7 +19,7 @@ const theme = createTheme({
 });
 
 const Main = styled("div")(({ theme }) => ({
-  height: "100%",
+  minHeight: "100vh", // Updated
   width: "100%",
   padding: 0,
   margin: 0,
@@ -56,6 +59,7 @@ const ContainerIntro = styled(Box)(({ theme }) => ({
   alignItems: "center",
   backgroundImage: `url(${meOpacity})`,
   padding: "10% 5%",
+  height: "100%",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
   backgroundPosition: "100%",
@@ -66,7 +70,8 @@ const ContainerIntro = styled(Box)(({ theme }) => ({
 
     justifyContent: "center",
     alignItems: "center",
-    padding: "10% 5%",
+    flexDirection: "column",
+    padding: "5% 5%",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "100%",
@@ -100,18 +105,24 @@ function App() {
           <CircularProgress size={80} sx={{ color: "limegreen" }} />
         ) : (
           <>
-            <ContainerIntro>
-              <BoxTitle
-                sx={{
-                  background: `${isLightMode ? "aliceblue" : `${grey[900]}`}`,
-                }}
-              >
-                <HomePageBox isLightMode={isLightMode} />
-              </BoxTitle>
-            </ContainerIntro>
+            <Fade in={true} timeout={2000}>
+              <ContainerIntro>
+                <BoxTitle
+                  sx={{
+                    background: `${isLightMode ? "aliceblue" : `${grey[900]}`}`,
+                  }}
+                >
+                  <HomePageBox isLightMode={isLightMode} />
+                </BoxTitle>
+
+                <HomePageBtn />
+              </ContainerIntro>
+            </Fade>
+
+            <Blank />
+            <SkillsSection />
           </>
         )}
-        <Blank />
       </Main>
     </ThemeProvider>
   );

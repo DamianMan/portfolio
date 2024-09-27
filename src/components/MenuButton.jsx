@@ -2,20 +2,20 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import SpeedDial from "@mui/material/SpeedDial";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
-import FileCopyIcon from "@mui/icons-material/FileCopyOutlined";
-import SaveIcon from "@mui/icons-material/Save";
-import PrintIcon from "@mui/icons-material/Print";
-import ShareIcon from "@mui/icons-material/Share";
+import BlurLinearIcon from "@mui/icons-material/BlurLinear";
+import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
+import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import CloseIcon from "@mui/icons-material/Close";
 import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import SegmentTwoToneIcon from "@mui/icons-material/SegmentTwoTone";
 import { grey } from "@mui/material/colors";
 
 const actions = [
-  { icon: <FileCopyIcon />, name: "Copy" },
-  { icon: <SaveIcon />, name: "Save" },
-  { icon: <PrintIcon />, name: "Print" },
-  { icon: <ShareIcon />, name: "Share" },
+  { icon: <BlurLinearIcon />, name: "Skills" },
+  { icon: <AutoAwesomeMotionIcon />, name: "Projects" },
+  { icon: <ConnectWithoutContactIcon />, name: "Connect With Me" },
+  { icon: <PictureAsPdfIcon />, name: "Resume" },
 ];
 
 export default function OpenIconSpeedDial() {

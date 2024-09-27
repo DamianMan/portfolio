@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, Typography, Box } from "@mui/material";
+import { styled, Typography, Box, Fade } from "@mui/material";
 import meAi from "../assets/meAi.jpg";
 import { grey } from "@mui/material/colors";
 
@@ -28,7 +28,8 @@ const Image = styled("img")(({ theme }) => ({
 const FullStackText = styled(Typography)(({ theme }) => ({
   fontSize: 33,
   fontFamily: "Roboto, san-serif",
-  fontWeight: 100,
+  fontWeight: 500,
+  color: "grey",
   [theme.breakpoints.up("sm")]: {
     fontSize: 50,
   },
@@ -38,6 +39,7 @@ const IntroText = styled(Typography)(({ theme }) => ({
   fontSize: 16,
   fontFamily: "Roboto, san-serif",
   fontWeight: 100,
+  color: "darkgrey",
   [theme.breakpoints.up("sm")]: {
     fontSize: 18,
   },
@@ -57,47 +59,41 @@ const Containers = styled(Box)(({ theme }) => ({
 function HomePageBox({ isLightMode }) {
   return (
     <Main>
-      <Containers>
-        <FullStackText color="#00bf63" align="left">
-          Junior
-        </FullStackText>
-        <FullStackText color="#00bf63" align="left">
-          Full Stack Developer
-        </FullStackText>
-      </Containers>
-      <Containers
-        sx={{
-          background: "#86D293",
-          boxShadow: "5px 5px 10px grey",
-          borderRadius: 5,
-          padding: 3,
-          margin: "5% 10%",
-        }}
-      >
-        <IntroText
-          color={isLightMode ? `${grey[900]}` : "aliceblue"}
-          align="left"
+      <Fade in={true} timeout={4000}>
+        <Containers>
+          <FullStackText align="left">Junior</FullStackText>
+          <FullStackText align="left">Full Stack Developer</FullStackText>
+        </Containers>
+      </Fade>
+      <Fade in={true} timeout={6000}>
+        <Containers
+          sx={{
+            borderRadius: 2,
+            padding: 3,
+            margin: "5% 10%",
+          }}
         >
-          Welcome to my personal portfolio, a place where I can share with you
-          all my projects, work experiences and skills.
-        </IntroText>
-        <br></br>
-        <IntroText
-          color={isLightMode ? `${grey[900]}` : "aliceblue"}
-          align="left"
+          <IntroText align="left">
+            Welcome to my personal portfolio, a place where I can share with you
+            all my projects, work experiences and skills.
+          </IntroText>
+          <br></br>
+          <IntroText align="left">
+            Mine is a really particular transition: I come from the world of
+            professional football and I always had a strong passion and inner
+            attraction to the world of technology.
+          </IntroText>
+        </Containers>
+      </Fade>
+      <Fade in={true} timeout={8000}>
+        <Containers
+          sx={{
+            margin: "0px 1%",
+          }}
         >
-          Mine is a really particular transition: I come from the world of
-          professional football and I always had a strong passion and inner
-          attraction to the world of technology.
-        </IntroText>
-      </Containers>
-      <Containers
-        sx={{
-          margin: "0px 1%",
-        }}
-      >
-        <Image src={meAi} />
-      </Containers>
+          <Image src={meAi} />
+        </Containers>
+      </Fade>
     </Main>
   );
 }
