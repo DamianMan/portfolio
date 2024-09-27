@@ -66,7 +66,7 @@ function ProjectItem({ item }) {
         <CardMedia
           component="img"
           sx={{ objectFit: "contain", width: "100%", height: "auto" }}
-          image={`.../../src/assets/${item.image}`}
+          image={`./.../../src/assets/${item.image}`}
           alt={item.name}
         />
         <CardContent>
