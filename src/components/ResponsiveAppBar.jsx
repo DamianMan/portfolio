@@ -39,7 +39,7 @@ function ResponsiveAppBar({ toogleTheme, isLightMode }) {
   };
 
   const TitleName = styled(Typography)(({ theme }) => ({
-    fontFamily: "Roboto, san-serif",
+    fontFamily: "Montserrat",
     fontWeight: 400,
     fontSize: 20,
     letterSpacing: 3,

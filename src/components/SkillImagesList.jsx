@@ -2,7 +2,7 @@ import * as React from "react";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import skills from "../assets/data/skillsdata";
-import { Slide, Tooltip } from "@mui/material";
+import { Slide, Tooltip, styled } from "@mui/material";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { useMediaQuery } from "@mui/material"; // Import useMediaQuery
@@ -19,6 +19,17 @@ export default function SkillImageList() {
 
   const cols = isMd ? 2 : isSm ? 3 : isXs ? 2 : 6; // 6 for large screens, 4 for medium, 3 for small, 2 for extra-small
 
+  const Image = styled("img")(({ theme }) => ({
+    objectFit: "contain",
+    borderRadius: 10,
+    width: 170,
+    height: 90,
+    [theme.breakpoints.up("sm")]: {
+      width: 200,
+      height: 100,
+      objectFit: "contain",
+    },
+  }));
   return (
     <ImageList
       ref={container}
@@ -54,13 +65,7 @@ export default function SkillImageList() {
                 padding: "20px 0px",
               }}
             >
-              <img
-                style={{
-                  width: 200,
-                  height: 50,
-                  objectFit: "contain",
-                  borderRadius: 10,
-                }}
+              <Image
                 srcSet={`${item.url}`}
                 src={`${item.url}`}
                 alt={item.name}

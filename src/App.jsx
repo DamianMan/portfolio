@@ -43,14 +43,19 @@ const BoxTitle = styled(Box)(({ theme }) => ({
 }));
 
 const Title = styled("h1")(({ theme }) => ({
-  fontFamily: "Montserrat, san-serif",
+  fontFamily: "Montserrat",
   fontWeight: 100,
 }));
 
 const Blank = styled(Box)(({ theme }) => ({
   background: "transparent",
-  margin: 100,
+  margin: 20,
   height: "10%",
+  [theme.breakpoints.up("sm")]: {
+    background: "transparent",
+    margin: 100,
+    height: "10%",
+  },
 }));
 
 const ContainerIntro = styled(Box)(({ theme }) => ({

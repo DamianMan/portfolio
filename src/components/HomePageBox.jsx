@@ -27,7 +27,7 @@ const Image = styled("img")(({ theme }) => ({
 
 const FullStackText = styled(Typography)(({ theme }) => ({
   fontSize: 33,
-  fontFamily: "Roboto, san-serif",
+  fontFamily: "Montserrat",
   fontWeight: 500,
   color: "grey",
   [theme.breakpoints.up("sm")]: {
@@ -37,8 +37,8 @@ const FullStackText = styled(Typography)(({ theme }) => ({
 
 const IntroText = styled(Typography)(({ theme }) => ({
   fontSize: 16,
-  fontFamily: "Roboto, san-serif",
-  fontWeight: 100,
+  fontFamily: "Montserrat",
+  fontWeight: 300,
   color: "darkgrey",
   [theme.breakpoints.up("sm")]: {
     fontSize: 18,
@@ -74,18 +74,18 @@ function HomePageBox({ isLightMode }) {
           }}
         >
           <IntroText align="left">
-            Welcome to my personal portfolio, a place where I can share with you
-            all my projects, work experiences and skills.
+            Welcome There! Check out my portfolio here, my projects on GitHub,
+            and connect with me on LinkedIn.
           </IntroText>
           <br></br>
           <IntroText align="left">
-            Mine is a really particular transition: I come from the world of
-            professional football and I always had a strong passion and inner
-            attraction to the world of technology.
+            This is my showcase where you can see what means transitioning from
+            the world of professional football to the dynamic landscape of
+            technology.
           </IntroText>
         </Containers>
       </Fade>
-      <Fade in={true} timeout={8000}>
+      <Fade in={true} timeout={7000}>
         <Containers
           sx={{
             margin: "0px 1%",
