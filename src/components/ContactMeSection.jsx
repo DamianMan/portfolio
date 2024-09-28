@@ -233,6 +233,9 @@ function ContactMeSection(props) {
                           fontFamily: "Montserrat", // Apply font family to the label
                           color: "grey",
                         },
+                        label: {
+                          color: "grey",
+                        },
 
                         width: { xs: "100%", md: "50%", lg: "50%" },
                       }}
