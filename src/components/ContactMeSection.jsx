@@ -231,7 +231,7 @@ function ContactMeSection(props) {
                       sx={{
                         "& .MuiInputLabel-root": {
                           fontFamily: "Montserrat", // Apply font family to the label
-                          color: "darkgrey",
+                          color: "grey",
                         },
 
                         width: { xs: "100%", md: "50%", lg: "50%" },
