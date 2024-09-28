@@ -6,8 +6,9 @@ import {
   TextField,
   IconButton,
   Button,
+  Collapse,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Grid from "@mui/material/Grid2";
 import HomeIcon from "@mui/icons-material/Home";
 import PlaceIcon from "@mui/icons-material/Place";
@@ -15,6 +16,7 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SendIcon from "@mui/icons-material/Send";
+import { useInView } from "framer-motion";
 
 const info = [
   {
@@ -81,6 +83,8 @@ const Title = styled(Typography)(({ theme }) => ({
 }));
 
 function ContactMeSection(props) {
+  const container = useRef();
+  const inView = useInView(container, { once: true });
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -109,157 +113,159 @@ function ContactMeSection(props) {
   };
   return (
     <>
-      <Title>Connect</Title>
-      <Typography align="center" fontFamily={"Montserrat"} color="grey">
-        Please leave me a message and I will get in touch with you 💬
-      </Typography>
-      <form onSubmit={handleSubmit}>
-        <Stack col={2} sx={{ marginTop: "30px" }}>
-          <Grid container spacing={3}>
-            <Grid
-              size={{ xs: 12, md: 6, lg: 6 }}
-              sx={{
-                display: "flex",
-                justifyContent: {
-                  xs: "center",
-                  md: "flex-end",
-                  lg: "flex-end",
-                },
-                alignItems: { xs: "center", md: "flex-end", lg: "flex-end" },
-                flexDirection: "column",
-              }}
-            >
-              <TextField
+      <Collapse ref={container} in={inView} timeout={6000} collapsedSize={30}>
+        <Title id="connect">Connect</Title>
+        <Typography align="center" fontFamily={"Montserrat"} color="grey">
+          Please leave me a message and I will get in touch with you 💬
+        </Typography>
+        <form onSubmit={handleSubmit}>
+          <Stack col={2} sx={{ marginTop: "30px" }}>
+            <Grid container spacing={3}>
+              <Grid
+                size={{ xs: 12, md: 6, lg: 6 }}
                 sx={{
-                  width: { xs: "90%", md: "50%", lg: "50%" },
-                  input: { fontFamily: "Montserrat", color: "darkgrey" },
-                  label: { fontFamily: "Montserrat" },
-                }}
-                variant="filled"
-                label="Full Name"
-                type="text"
-                value={fullName}
-                onChange={handleFullName}
-                color="success"
-                focused
-                required
-              />
-              <TextField
-                sx={{
-                  width: { xs: "90%", md: "50%", lg: "50%" },
-                  margin: "5px 0",
-                  input: { fontFamily: "Montserrat", color: "darkgrey" },
-                  label: { fontFamily: "Montserrat" },
-                }}
-                variant="filled"
-                label="Email"
-                type="email"
-                value={email}
-                onChange={handleEmail}
-                color="success"
-                focused
-                required
-              />
-              <TextField
-                sx={{
-                  width: { xs: "90%", md: "50%", lg: "50%" },
-                  input: { fontFamily: "Montserrat" },
-                  label: { fontFamily: "Montserrat" },
-
-                  "& .MuiInputBase-input": {
-                    color: "darkgrey", // Change the input text color
-                    fontFamily: "Montserrat",
+                  display: "flex",
+                  justifyContent: {
+                    xs: "center",
+                    md: "flex-end",
+                    lg: "flex-end",
                   },
+                  alignItems: { xs: "center", md: "flex-end", lg: "flex-end" },
+                  flexDirection: "column",
                 }}
-                label="Message"
-                multiline
-                rows={4}
-                value={message}
-                variant="filled"
-                onChange={handleMessage}
-                color="success"
-                focused
-                required
-              />
-            </Grid>
-            <Grid
-              size={{ xs: 12, md: 6, lg: 6 }}
-              sx={{
-                display: "flex",
-                justifyContent: {
-                  xs: "center",
-                  md: "flex-start",
-                  lg: "flex-start",
-                },
-                alignItems: {
-                  xs: "center",
-                  md: "flex-start",
-                  lg: "flex-start",
-                },
-                flexDirection: "column",
-              }}
-            >
-              {info.map((item, i) => (
-                <Box
-                  key={i}
+              >
+                <TextField
                   sx={{
-                    display: "flex",
-                    justifyContent: {
-                      xs: "center",
-                      md: "flex-start",
-                      lg: "flex-start",
-                    },
-                    alignItems: {
-                      xs: "center",
-                      md: "flex-start",
-                      lg: "flex-start",
-                    },
-                    width: "90%",
+                    width: { xs: "90%", md: "50%", lg: "50%" },
+                    input: { fontFamily: "Montserrat", color: "darkgrey" },
+                    label: { fontFamily: "Montserrat" },
                   }}
-                >
-                  {item.icon}
-                  <TextField
-                    id="input-with-sx"
-                    label={item.text}
-                    variant="standard"
-                    disabled
-                    sx={{
-                      "& .MuiInputLabel-root": {
-                        fontFamily: "Montserrat", // Apply font family to the label
-                        color: "darkgrey",
-                      },
+                  variant="filled"
+                  label="Full Name"
+                  type="text"
+                  value={fullName}
+                  onChange={handleFullName}
+                  color="success"
+                  focused
+                  required
+                />
+                <TextField
+                  sx={{
+                    width: { xs: "90%", md: "50%", lg: "50%" },
+                    margin: "5px 0",
+                    input: { fontFamily: "Montserrat", color: "darkgrey" },
+                    label: { fontFamily: "Montserrat" },
+                  }}
+                  variant="filled"
+                  label="Email"
+                  type="email"
+                  value={email}
+                  onChange={handleEmail}
+                  color="success"
+                  focused
+                  required
+                />
+                <TextField
+                  sx={{
+                    width: { xs: "90%", md: "50%", lg: "50%" },
+                    input: { fontFamily: "Montserrat" },
+                    label: { fontFamily: "Montserrat" },
 
-                      width: { xs: "100%", md: "50%", lg: "50%" },
+                    "& .MuiInputBase-input": {
+                      color: "darkgrey", // Change the input text color
+                      fontFamily: "Montserrat",
+                    },
+                  }}
+                  label="Message"
+                  multiline
+                  rows={4}
+                  value={message}
+                  variant="filled"
+                  onChange={handleMessage}
+                  color="success"
+                  focused
+                  required
+                />
+              </Grid>
+              <Grid
+                size={{ xs: 12, md: 6, lg: 6 }}
+                sx={{
+                  display: "flex",
+                  justifyContent: {
+                    xs: "center",
+                    md: "flex-start",
+                    lg: "flex-start",
+                  },
+                  alignItems: {
+                    xs: "center",
+                    md: "flex-start",
+                    lg: "flex-start",
+                  },
+                  flexDirection: "column",
+                }}
+              >
+                {info.map((item, i) => (
+                  <Box
+                    key={i}
+                    sx={{
+                      display: "flex",
+                      justifyContent: {
+                        xs: "center",
+                        md: "flex-start",
+                        lg: "flex-start",
+                      },
+                      alignItems: {
+                        xs: "center",
+                        md: "flex-start",
+                        lg: "flex-start",
+                      },
+                      width: "90%",
                     }}
-                  />
-                </Box>
-              ))}
+                  >
+                    {item.icon}
+                    <TextField
+                      id="input-with-sx"
+                      label={item.text}
+                      variant="standard"
+                      disabled
+                      sx={{
+                        "& .MuiInputLabel-root": {
+                          fontFamily: "Montserrat", // Apply font family to the label
+                          color: "darkgrey",
+                        },
+
+                        width: { xs: "100%", md: "50%", lg: "50%" },
+                      }}
+                    />
+                  </Box>
+                ))}
+              </Grid>
             </Grid>
-          </Grid>
-        </Stack>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            margin: "30px 0",
-          }}
-        >
-          <Button
-            variant="contained"
+          </Stack>
+          <Box
             sx={{
-              width: { xs: "50%", md: "10%" },
-              background: "#00bf63",
-              color: "aliceblue",
-              borderRadius: "16px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              margin: "30px 0",
             }}
-            type="submit"
           >
-            Send
-            <SendIcon sx={{ ml: 1 }} />
-          </Button>
-        </Box>
-      </form>
+            <Button
+              variant="contained"
+              sx={{
+                width: { xs: "50%", md: "10%" },
+                background: "#00bf63",
+                color: "aliceblue",
+                borderRadius: "16px",
+              }}
+              type="submit"
+            >
+              Send
+              <SendIcon sx={{ ml: 1 }} />
+            </Button>
+          </Box>
+        </form>
+      </Collapse>
     </>
   );
 }

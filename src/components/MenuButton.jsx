@@ -10,12 +10,21 @@ import CloseIcon from "@mui/icons-material/Close";
 import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import SegmentTwoToneIcon from "@mui/icons-material/SegmentTwoTone";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import pdf from "../assets/resume.pdf";
 
 const actions = [
   { icon: <BlurLinearIcon />, name: "Skills", href: "#skills" },
   { icon: <AutoAwesomeMotionIcon />, name: "Projects", href: "#projects" },
-  { icon: <ConnectWithoutContactIcon />, name: "Connect With Me", href: "#" },
-  { icon: <PictureAsPdfIcon />, name: "Resume", href: "#" },
+  {
+    icon: <ConnectWithoutContactIcon />,
+    name: "Connect With Me",
+    href: "#connect",
+  },
+  {
+    icon: <PictureAsPdfIcon />,
+    name: "Resume",
+    href: pdf,
+  },
   {
     icon: <GitHubIcon />,
     name: "Github Profile",

@@ -31,11 +31,10 @@ function ProjectsSection(props) {
   return (
     <>
       <Slide ref={container} in={inView} direction="down" timeout={3000}>
-        <Title>Projects</Title>
+        <Title id="projects">Projects</Title>
       </Slide>
 
       <Stack
-        id="projects"
         sx={{
           display: "flex",
           justifyContent: "center",

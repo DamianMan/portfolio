@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, Typography, Box, Fade } from "@mui/material";
+import { styled, Typography, Box, Fade, Link } from "@mui/material";
 import meAi from "../assets/meAi.jpg";
 import { grey } from "@mui/material/colors";
 
@@ -76,8 +76,21 @@ function HomePageBox({ isLightMode }) {
           }}
         >
           <IntroText align="left">
-            Welcome There! Check out my portfolio here, my projects on GitHub,
-            and connect with me on LinkedIn.
+            Welcome There! Check out my portfolio here, my projects on{" "}
+            <Link
+              sx={{ textDecoration: "none", color: "#00bf63" }}
+              href="https://github.com/DamianMan"
+            >
+              GitHub
+            </Link>
+            , and connect with me on{" "}
+            <Link
+              sx={{ textDecoration: "none", color: "#00bf63" }}
+              href="https://www.linkedin.com/in/damiano-manzillo-787344259/"
+            >
+              LinkedIn
+            </Link>
+            .
           </IntroText>
           <br></br>
           <IntroText align="left">
