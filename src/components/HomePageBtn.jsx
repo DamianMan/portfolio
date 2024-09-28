@@ -20,7 +20,7 @@ const pulse = keyframes`
 
 `;
 
-export default function HomePageBtn() {
+export default function HomePageBtn({ text }) {
   return (
     <Stack sx={{ margin: "30px 0px" }}>
       <Button
@@ -37,7 +37,7 @@ export default function HomePageBtn() {
         component="a"
         href="#skills"
       >
-        Explore
+        {text}
         <ArrowCircleDownIcon fontSize="large" sx={{ ml: 1 }} />
       </Button>
     </Stack>

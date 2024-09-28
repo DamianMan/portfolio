@@ -16,7 +16,8 @@ import React, { useRef } from "react";
 
 import IconButton from "@mui/material/IconButton";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
+import InsertLinkIcon from "@mui/icons-material/InsertLink";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import { green, grey, red } from "@mui/material/colors";
 import { useState } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -45,7 +46,7 @@ function ProjectItem({ item }) {
           maxWidth: "95%",
           borderRadius: 5,
           background: "transparent",
-          boxShadow: "0px 5px 10px #00bf63",
+          boxShadow: `3px 3px 10px ${green[200]}`,
         }}
       >
         <CardHeader
@@ -101,6 +102,12 @@ function ProjectItem({ item }) {
               onClick={onChangeFavorite}
               sx={{ color: favorite ? `${red[400]}` : "darkgrey" }}
             />
+          </IconButton>
+          <IconButton href={item.website}>
+            <InsertLinkIcon sx={{ color: "darkgrey" }} />
+          </IconButton>
+          <IconButton href={item.github}>
+            <GitHubIcon sx={{ color: "darkgrey" }} />
           </IconButton>
 
           <IconButton onClick={handleLines}>

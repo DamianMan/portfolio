@@ -12,6 +12,7 @@ import HomePageBtn from "./components/HomePageBtn";
 import SkillsSection from "./components/SkillsSection";
 import "./App.css";
 import ProjectsSection from "./components/ProjectsSection";
+import ContactMeSection from "./components/ContactMeSection";
 const theme = createTheme({
   typography: {
     fontFamily: "Roboto, san-serif",
@@ -31,7 +32,7 @@ const Main = styled("div")(({ theme }) => ({
 
 const BoxTitle = styled(Box)(({ theme }) => ({
   backgroundColor: "#fff",
-  boxShadow: "5px 5px 10px 0px limegreen",
+  boxShadow: "5px 5px 10px 0px #00bf63",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -127,7 +128,7 @@ function App() {
                   <HomePageBox isLightMode={isLightMode} />
                 </BoxTitle>
 
-                <HomePageBtn />
+                <HomePageBtn text={"Explore"} />
               </ContainerIntro>
             </Fade>
 
@@ -135,6 +136,8 @@ function App() {
             <SkillsSection />
             <Blank />
             <ProjectsSection />
+            <Blank />
+            <ContactMeSection />
           </>
         )}
       </Main>

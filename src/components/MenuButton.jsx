@@ -9,13 +9,18 @@ import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import CloseIcon from "@mui/icons-material/Close";
 import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import SegmentTwoToneIcon from "@mui/icons-material/SegmentTwoTone";
-import { grey } from "@mui/material/colors";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const actions = [
   { icon: <BlurLinearIcon />, name: "Skills", href: "#skills" },
-  { icon: <AutoAwesomeMotionIcon />, name: "Projects", href: "#" },
+  { icon: <AutoAwesomeMotionIcon />, name: "Projects", href: "#projects" },
   { icon: <ConnectWithoutContactIcon />, name: "Connect With Me", href: "#" },
   { icon: <PictureAsPdfIcon />, name: "Resume", href: "#" },
+  {
+    icon: <GitHubIcon />,
+    name: "Github Profile",
+    href: "https://github.com/DamianMan",
+  },
 ];
 
 export default function OpenIconSpeedDial() {

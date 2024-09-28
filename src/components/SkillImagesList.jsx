@@ -43,6 +43,7 @@ export default function SkillImageList() {
     >
       {skills.map((item) => (
         <Slide
+          key={item.name}
           in={isInView}
           direction="right"
           easing={"cubic-bezier(0.0, 0, 0.2, 1)"}
@@ -50,7 +51,6 @@ export default function SkillImageList() {
         >
           <Tooltip title={item.name}>
             <ImageListItem
-              key={item.name}
               sx={{
                 background: "rgba(255, 255, 255, 0.2)",
 

@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid2";
 import projectsData from "../assets/data/projectsData";
 import ProjectItem from "./ProjectItem";
 import { useInView } from "framer-motion";
+import GithubBox from "./GithubBox";
 
 const Title = styled(Typography)(({ theme }) => ({
   letterSpacing: 3,
@@ -29,7 +30,7 @@ function ProjectsSection(props) {
   const inView = useInView(container, { once: true });
   return (
     <>
-      <Slide ref={container} in={inView} direction="bottom" timeout={3000}>
+      <Slide ref={container} in={inView} direction="down" timeout={3000}>
         <Title>Projects</Title>
       </Slide>
 
@@ -47,6 +48,7 @@ function ProjectsSection(props) {
         <Grid container spacing={2}>
           {projectsData.map((item) => (
             <Grid
+              key={item.name}
               size={{ xs: 12, md: 6 }}
               sx={{
                 display: "flex",
@@ -60,6 +62,7 @@ function ProjectsSection(props) {
           ))}
         </Grid>
       </Stack>
+      <GithubBox />
     </>
   );
 }

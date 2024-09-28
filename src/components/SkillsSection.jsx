@@ -45,39 +45,48 @@ function SkillsSection(props) {
   const container = useRef();
   const isInView = useInView(container, { once: true });
   return (
-    <Slide ref={container} in={isInView} direction="left" timeout={3000}>
-      <Stack
-        id="skills"
-        sx={{ display: "flex", flexDirection: "column", width: "100%" }}
-      >
+    <Stack
+      id="skills"
+      sx={{ display: "flex", flexDirection: "column", width: "100%" }}
+    >
+      <Slide ref={container} in={isInView} direction="left" timeout={3000}>
         <Title>Skills</Title>
-        <Box>
-          <Slide in={isInView} timeout={3000} direction="right">
-            <Description>
-              My inner attraction and strong passion to the world of technology
-              led me to learn so many new things: these are some just of some
-              skills I gained during my studies.
-            </Description>
-          </Slide>
-          <Slide in={isInView} timeout={3000} direction="left">
-            <Description>
-              My love for mobile apps development brought me to expand my
-              studies to React Native, which is my current and main goal to
-              accomplish: almost in deployment for a mobile app (check the
-              project on GitHub).
-            </Description>
-          </Slide>
-          <Slide in={isInView} timeout={3000} direction="right">
-            <Description>
-              And my really next subject of attention will be Django as Python
-              framework to complete my Python skills set
-            </Description>
-          </Slide>
-        </Box>
+      </Slide>
 
-        <SkillImageList />
-      </Stack>
-    </Slide>
+      <Box>
+        <Slide in={isInView} timeout={3000} direction="left">
+          <Description>
+            For 20 years, I played in Italy's professional football leagues,
+            showcasing not just my technical skills but also my strategic
+            understanding of the game.
+          </Description>
+        </Slide>
+        <Slide in={isInView} timeout={3000} direction="right">
+          <Description>
+            I always had an inner attraction and strong passion to the world of
+            technology which led me to discover and be more and more amazed by a
+            new environment: below are just some the skills I gained in my new
+            path.
+          </Description>
+        </Slide>
+        <Slide in={isInView} timeout={3000} direction="left">
+          <Description>
+            My love for mobile apps development brought me to expand my studies
+            to React Native, which is my current and main goal to accomplish:
+            actually I'm almost in a release phase for a mobile app (check the
+            project on GitHub).
+          </Description>
+        </Slide>
+        <Slide in={isInView} timeout={3000} direction="right">
+          <Description>
+            And my really next subject of attention will be Django as Python
+            framework to complete my Python skills set
+          </Description>
+        </Slide>
+      </Box>
+
+      <SkillImageList />
+    </Stack>
   );
 }
 
