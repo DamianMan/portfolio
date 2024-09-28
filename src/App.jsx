@@ -13,6 +13,7 @@ import SkillsSection from "./components/SkillsSection";
 import "./App.css";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactMeSection from "./components/ContactMeSection";
+import Footer from "./components/Footer";
 const theme = createTheme({
   typography: {
     fontFamily: "Roboto, san-serif",
@@ -138,6 +139,8 @@ function App() {
             <ProjectsSection />
             <Blank />
             <ContactMeSection />
+            <Blank />
+            <Footer />
           </>
         )}
       </Main>
