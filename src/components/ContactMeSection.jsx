@@ -82,7 +82,7 @@ const Title = styled(Typography)(({ theme }) => ({
   },
 }));
 
-function ContactMeSection(props) {
+function ContactMeSection({ isLightMode }) {
   const container = useRef();
   const inView = useInView(container, { once: true });
   const [fullName, setFullName] = useState("");
@@ -231,10 +231,13 @@ function ContactMeSection(props) {
                       sx={{
                         "& .MuiInputLabel-root": {
                           fontFamily: "Montserrat", // Apply font family to the label
-                          color: "grey",
+                          color: isLightMode ? "grey" : "aliceblue",
                         },
                         label: {
-                          color: "grey",
+                          color: isLightMode ? "grey" : "aliceblue",
+                        },
+                        input: {
+                          color: isLightMode ? "grey" : "aliceblue",
                         },
 
                         width: { xs: "100%", md: "50%", lg: "50%" },

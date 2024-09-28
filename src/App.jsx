@@ -138,7 +138,7 @@ function App() {
             <Blank />
             <ProjectsSection />
             <Blank />
-            <ContactMeSection />
+            <ContactMeSection isLightMode={isLightMode} />
             <Blank />
             <Footer />
           </>
