@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://damianman.github.io/Portfolio",
+  "homepage": "https://damianman.github.io/portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
