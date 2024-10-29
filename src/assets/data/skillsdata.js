@@ -36,6 +36,10 @@ const skills = [
     url: "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png",
   },
   {
+    name: "DJANGO",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Django_logo.svg/260px-Django_logo.svg.png",
+  },
+  {
     name: "FLASK",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1024px-Flask_logo.svg.png",
   },

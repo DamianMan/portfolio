@@ -21,7 +21,7 @@ const Title = styled(Typography)(({ theme }) => ({
   margin: "30px 10px",
   [theme.breakpoints.up("sm")]: {
     letterSpacing: 7,
-    width: "10%",
+    width: "15%",
   },
 }));
 
@@ -44,11 +44,11 @@ function ProjectsSection(props) {
         }}
         ref={container}
       >
-        <Grid container spacing={2}>
+        <Grid container spacing={2} rowGap={3}>
           {projectsData.map((item) => (
             <Grid
               key={item.name}
-              size={{ xs: 12, md: 6 }}
+              size={{ xs: 12, md: 4 }}
               sx={{
                 display: "flex",
                 justifyContent: "center",

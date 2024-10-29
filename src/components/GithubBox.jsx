@@ -29,10 +29,10 @@ function GithubBox(props) {
       <Stack
         sx={{
           padding: 3,
-          marginTop: { xs: 3, md: 7 },
-          background: "rgba(255, 255, 255, 0.2)",
+          marginTop: { xs: 8, md: 25 },
+          background: "transparent",
           borderRadius: "16px",
-          boxShadow: "0 4px 20px lightgrey",
+          boxShadow: "0 4px 20px darkgray",
           backdropFilter: "blur(5px)",
           WebkitBackdropFilter: "blur(5px)", // For Safari support
           border: "1px solid rgba(255, 255, 255, 0.3)",

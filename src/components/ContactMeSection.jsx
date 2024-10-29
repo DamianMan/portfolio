@@ -78,7 +78,7 @@ const Title = styled(Typography)(({ theme }) => ({
   margin: "30px 10px",
   [theme.breakpoints.up("sm")]: {
     letterSpacing: 7,
-    width: "10%",
+    width: "15%",
   },
 }));
 

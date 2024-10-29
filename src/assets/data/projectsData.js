@@ -26,6 +26,25 @@ const projectsData = [
     ],
   },
   {
+    name: "Blue Soul",
+    website: "https://github.com/DamianMan/blue-soul",
+    github: "https://github.com/DamianMan/blue-soul",
+    image: bluesoul,
+    description:
+      "I developed a mobile application using React Native, designed to provide an intuitive and seamless user experience. The app is powered by a robust backend built with Node.js, Express, and MongoDB, utilizing RESTful APIs for efficient data handling and communication between the frontend and backend. Firebase Authentication ensures secure user access, while Expo and Expo Notifications provide real-time updates and alerts. Currently in the testing phase, the app is almost ready for deployment, with a focus on delivering a high-quality, secure, and engaging user experience.",
+    tech: [
+      "Javascript",
+      "React Native",
+      "Node",
+      "Express",
+      "MongoDB",
+      "RESTful APIs",
+      "Firebase Authentication",
+      "Expo",
+      "Expo Notification",
+    ],
+  },
+  {
     name: "Cilento Ruben Boats",
     website: "https://cilentorubenboats.it/",
     github: "https://github.com/DamianMan/ruben-boats",
@@ -45,25 +64,7 @@ const projectsData = [
       "Ionos VPN",
     ],
   },
-  {
-    name: "Blue Soul",
-    website: "https://github.com/DamianMan/blue-soul",
-    github: "https://github.com/DamianMan/blue-soul",
-    image: bluesoul,
-    description:
-      "I developed a mobile application using React Native, designed to provide an intuitive and seamless user experience. The app is powered by a robust backend built with Node.js, Express, and MongoDB, utilizing RESTful APIs for efficient data handling and communication between the frontend and backend. Firebase Authentication ensures secure user access, while Expo and Expo Notifications provide real-time updates and alerts. Currently in the testing phase, the app is almost ready for deployment, with a focus on delivering a high-quality, secure, and engaging user experience.",
-    tech: [
-      "Javascript",
-      "React Native",
-      "Node",
-      "Express",
-      "MongoDB",
-      "RESTful APIs",
-      "Firebase Authentication",
-      "Expo",
-      "Expo Notification",
-    ],
-  },
+
   {
     name: "Free Buys",
     website: "https://github.com/DamianMan/free-buys",

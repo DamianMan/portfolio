@@ -20,13 +20,13 @@ const Title = styled(Typography)(({ theme }) => ({
   margin: "30px 10px",
   [theme.breakpoints.up("sm")]: {
     letterSpacing: 7,
-    width: "10%",
+    width: "15%",
   },
 }));
 
 const Description = styled(Typography)(({ theme }) => ({
   textAlign: "start",
-  fontWeight: 300,
+  fontWeight: 400,
   color: "darkgrey",
   fontStyle: "italic",
 
@@ -36,7 +36,7 @@ const Description = styled(Typography)(({ theme }) => ({
   paddingLeft: 5,
   margin: "30px 10px",
   [theme.breakpoints.up("sm")]: {
-    fontSize: 20,
+    fontSize: 18,
     width: "50%",
   },
 }));
