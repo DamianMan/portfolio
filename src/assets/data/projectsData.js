@@ -2,6 +2,7 @@ import cilentodamare from "../../assets/cilentodamare.png";
 import rubenboats from "../../assets/rubenboats.png";
 import freebuys from "../../assets/freebuys.png";
 import bluesoul from "../../assets/bluesoul.png";
+import djangoBlog from "../../assets/django-blog.png";
 
 const projectsData = [
   {
@@ -84,6 +85,29 @@ const projectsData = [
       "Stripe",
       "RESTful APIs",
       "DHL APIs Integration",
+    ],
+  },
+  {
+    name: "Django Blog",
+    website: "https://django-blog-aqes.onrender.com/",
+    github: "https://github.com/DamianMan/django-blog",
+    image: djangoBlog,
+    description:
+      "I developed a dynamic blog application using Django, leveraging class-based views (DetailView, TemplateView, and ListView) to efficiently render content from an integrated PostgreSQL database. The application was crafted with Django Template Language (DTL) for seamless templating, ensuring a clean and responsive user experience. I implemented one-to-many and many-to-many relationships within my models to enhance the data structure and facilitate complex interactions.      Deployed on Render, the app incorporates Cloudinary for efficient media file management, enhancing performance and scalability. For secure access, I implemented user authentication using Django’s built-in User Auth model, enabling authorized login and content interaction. Each post features a dedicated comments section, allowing users to engage with the content. Additionally, I designed a real-time group chat feature accessible only to logged-in users, fostering a sense of community within the platform.",
+    tech: [
+      "Django",
+      "Python",
+      "PostgreSQL",
+      "Django Template Language (DTL)",
+      "Class-Based Views",
+      "DetailView",
+      "TemplateView",
+      "ListView",
+      "Cloudinary",
+      "User Authentication",
+      "One-to-Many Relationships",
+      "Many-to-Many Relationships",
+      "Real-Time WebSocket Chat",
     ],
   },
 ];
