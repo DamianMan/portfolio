@@ -81,7 +81,18 @@ function ResponsiveAppBar({ toogleTheme, isLightMode }) {
       }}
     >
       <CustomBox>
-        <MenuButton />
+        <Tooltip title={`Toogle ${isLightMode ? "dark" : "light"} mode`}>
+          <IconButton
+            onClick={handleToogleClick}
+            style={{ position: "absolute", top: 15, left: 5 }}
+          >
+            <LightbulbIcon
+              style={{
+                color: `${isLightMode ? `${grey[900]}` : "aliceblue"}`,
+              }}
+            />
+          </IconButton>
+        </Tooltip>
       </CustomBox>
       <CustomBox>
         <TitleName
@@ -106,18 +117,7 @@ function ResponsiveAppBar({ toogleTheme, isLightMode }) {
       </CustomBox>
 
       <CustomBox>
-        <Tooltip title={`Toogle ${isLightMode ? "dark" : "light"} mode`}>
-          <IconButton
-            onClick={handleToogleClick}
-            style={{ position: "absolute", top: 15, right: 10 }}
-          >
-            <LightbulbIcon
-              style={{
-                color: `${isLightMode ? `${grey[900]}` : "aliceblue"}`,
-              }}
-            />
-          </IconButton>
-        </Tooltip>
+        <MenuButton />
       </CustomBox>
     </AppBar>
   );

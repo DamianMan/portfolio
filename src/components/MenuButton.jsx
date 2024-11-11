@@ -11,13 +11,14 @@ import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import SegmentTwoToneIcon from "@mui/icons-material/SegmentTwoTone";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import pdf from "../assets/resume.pdf";
+import { Backdrop } from "@mui/material";
 
 const actions = [
   { icon: <BlurLinearIcon />, name: "Skills", href: "#skills" },
   { icon: <AutoAwesomeMotionIcon />, name: "Projects", href: "#projects" },
   {
     icon: <ConnectWithoutContactIcon />,
-    name: "Connect With Me",
+    name: "Connect",
     href: "#connect",
   },
   {
@@ -27,58 +28,121 @@ const actions = [
   },
   {
     icon: <GitHubIcon />,
-    name: "Github Profile",
+    name: "Github",
     href: "https://github.com/DamianMan",
   },
 ];
 
 export default function OpenIconSpeedDial() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = (href) => {
+    setOpen(false);
+    window.location.href = href;
+  };
   return (
-    <SpeedDial
-      ariaLabel="SpeedDial openIcon example"
-      direction="down"
-      FabProps={{
-        sx: {
-          boxShadow: "none",
-          backgroundColor: "transparent",
-          color: "#00bf63", // Replace with your desired color
-          "&:hover": {
-            boxShadow: "none",
-
-            backgroundColor: "transparent",
-
-            color: "#73EC8B", // Replace with hover color
-          },
-          animation: "0.5s ease-in-out",
-        },
-      }}
-      icon={
-        <SpeedDialIcon
-          icon={<SegmentTwoToneIcon fontSize="large" />}
-          openIcon={<CloseIcon fontSize="large" />}
-        />
-      }
+    <Box
       sx={{
+        flexGrow: 1,
+
         position: "absolute",
         top: 0,
-        left: 0,
-
-        "& .MuiSpeedDial-root": {
-          backgroundColor: "#00bf63", // Customize the background of the SpeedDial button
-          "&:hover": {
-            backgroundColor: "#00a653", // Customize hover background color
-          },
-        },
+        right: 5,
       }}
     >
-      {actions.map((action) => (
-        <SpeedDialAction
-          key={action.name}
-          icon={action.icon}
-          tooltipTitle={action.name}
-          href={action.href}
-        />
-      ))}
-    </SpeedDial>
+      <Backdrop open={open} />
+      <SpeedDial
+        direction="down"
+        ariaLabel="SpeedDial tooltip example"
+        sx={{
+          "& .MuiSpeedDial-root": {
+            backgroundColor: "#00bf63", // Customize the background of the SpeedDial button
+            "&:hover": {
+              backgroundColor: "#00a653", // Customize hover background color
+            },
+          },
+        }}
+        FabProps={{
+          sx: {
+            boxShadow: "none",
+            backgroundColor: "transparent",
+            color: "#00bf63", // Replace with your desired color
+            "&:hover": {
+              backgroundColor: "transparent",
+
+              color: "#73EC8B", // Replace with hover color
+            },
+            animation: "0.5s ease-in-out",
+          },
+        }}
+        icon={
+          <SpeedDialIcon
+            icon={<SegmentTwoToneIcon fontSize="large" />}
+            openIcon={<CloseIcon fontSize="large" />}
+          />
+        }
+        onOpen={handleOpen}
+        open={open}
+      >
+        {actions.map((action) => (
+          <SpeedDialAction
+            key={action.name}
+            icon={action.icon}
+            tooltipTitle={action.name}
+            tooltipOpen
+            onClick={() => handleClose(action.href)}
+          />
+        ))}
+      </SpeedDial>
+      {/* <Backdrop open={open} />
+      <SpeedDial
+        ariaLabel="SpeedDial tooltip example"
+        direction="down"
+        onClose={handleClose}
+        onOpen={handleOpen}
+        open={open}
+        FabProps={{
+          sx: {
+            boxShadow: "none",
+            backgroundColor: "transparent",
+            color: "#00bf63", // Replace with your desired color
+            "&:hover": {
+              backgroundColor: "transparent",
+
+              color: "#73EC8B", // Replace with hover color
+            },
+            animation: "0.5s ease-in-out",
+          },
+        }}
+        icon={
+          <SpeedDialIcon
+            icon={<SegmentTwoToneIcon fontSize="large" />}
+            openIcon={<CloseIcon fontSize="large" />}
+          />
+        }
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+
+          "& .MuiSpeedDial-root": {
+            backgroundColor: "#00bf63", // Customize the background of the SpeedDial button
+            "&:hover": {
+              backgroundColor: "#00a653", // Customize hover background color
+            },
+          },
+        }}
+      >
+        {actions.map((action) => (
+          <SpeedDialAction
+            key={action.name}
+            icon={action.icon}
+            tooltipTitle={action.name}
+            tooltipOpen
+            href={action.href}
+          />
+        ))}
+      </SpeedDial> */}
+    </Box>
   );
 }

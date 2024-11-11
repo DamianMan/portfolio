@@ -33,7 +33,6 @@ function ProjectItem({ item }) {
   const onChangeFavorite = () => {
     setFavorite(!favorite);
   };
-  console.log(item.image);
 
   const handleLines = () => {
     lines === 3 ? setLines(null) : setLines(3);
@@ -101,9 +100,8 @@ function ProjectItem({ item }) {
           </Box>
         </CardContent>
         <CardActions disableSpacing>
-          <IconButton aria-label="add to favorites">
+          <IconButton aria-label="add to favorites" onClick={onChangeFavorite}>
             <FavoriteIcon
-              onClick={onChangeFavorite}
               sx={{ color: favorite ? `${red[400]}` : "darkgrey" }}
             />
           </IconButton>
