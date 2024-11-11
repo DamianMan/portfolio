@@ -22,11 +22,6 @@ const actions = [
     href: "#connect",
   },
   {
-    icon: <PictureAsPdfIcon />,
-    name: "Resume",
-    href: pdf,
-  },
-  {
     icon: <GitHubIcon />,
     name: "Github",
     href: "https://github.com/DamianMan",

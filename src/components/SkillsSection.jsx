@@ -56,17 +56,20 @@ function SkillsSection(props) {
       <Box>
         <Slide in={isInView} timeout={3000} direction="left">
           <Description>
-            For 20 years, I played in Italy's professional football leagues,
-            showcasing not just my technical skills but also my strategic
-            understanding of the game.
+            I grew up in my family’s sportswear business, where I gained
+            hands-on experience in sales and customer relations. I spent my days
+            connecting with clients, learning their preferences, and making sure
+            they found exactly what they were looking for. This role was more
+            than just selling; it was about building relationships and
+            understanding the value of customer trust.
           </Description>
         </Slide>
         <Slide in={isInView} timeout={3000} direction="right">
           <Description>
-            I always had an inner attraction and strong passion to the world of
-            technology which led me to discover and be more and more amazed by a
-            new environment: below are just some the skills I gained in my new
-            path.
+            But my inner attraction and strong passion to the world of
+            technology led me to discover and be more and more amazed by this
+            amazing environment: below are just some the skills I gained during
+            my new career.
           </Description>
         </Slide>
         <Slide in={isInView} timeout={3000} direction="left">
@@ -79,8 +82,12 @@ function SkillsSection(props) {
         </Slide>
         <Slide in={isInView} timeout={3000} direction="right">
           <Description>
-            And my really next subject of attention will be Django as Python
-            framework to complete my Python skills set
+            Every successful mobile or web app relies on a strong, efficient
+            backend. To master this, I expanded my expertise to building robust
+            systems with RESTful APIs. My journey took me through Django, Flask,
+            Node, and Express, where I developed projects that showcase my
+            ability to manage both SQL and NoSQL databases, while designing
+            scalable and dynamic web services.
           </Description>
         </Slide>
       </Box>
