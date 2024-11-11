@@ -35,16 +35,13 @@ const actions = [
 
 export default function OpenIconSpeedDial() {
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = (href) => {
+  const handleClick = () => setOpen(!open);
+  const handleClose = () => {
     setOpen(false);
-    window.location.href = href;
   };
   return (
     <Box
       sx={{
-        flexGrow: 1,
-
         position: "absolute",
         top: 0,
         right: 5,
@@ -69,8 +66,6 @@ export default function OpenIconSpeedDial() {
             color: "#00bf63", // Replace with your desired color
             "&:hover": {
               backgroundColor: "transparent",
-
-              color: "#73EC8B", // Replace with hover color
             },
             animation: "0.5s ease-in-out",
           },
@@ -81,7 +76,7 @@ export default function OpenIconSpeedDial() {
             openIcon={<CloseIcon fontSize="large" />}
           />
         }
-        onOpen={handleOpen}
+        onClick={handleClick}
         open={open}
       >
         {actions.map((action) => (
@@ -90,7 +85,10 @@ export default function OpenIconSpeedDial() {
             icon={action.icon}
             tooltipTitle={action.name}
             tooltipOpen
-            onClick={() => handleClose(action.href)}
+            onClick={() => {
+              handleClose();
+              window.location.href = action.href;
+            }}
           />
         ))}
       </SpeedDial>
