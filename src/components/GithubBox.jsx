@@ -8,7 +8,7 @@ import { useRef } from "react";
 const pulse = keyframes`  
  
 0% {
- box-shadow: 0 0 0 0 ${green[400]};
+ box-shadow: 0 0 0 0 rgb(102, 204, 153);
 }
 
 70% {
@@ -21,7 +21,7 @@ const pulse = keyframes`
 
 `;
 
-function GithubBox(props) {
+function GithubBox({ isLightMode }) {
   const container = useRef();
   const inView = useInView(container, { once: true });
   return (
@@ -65,7 +65,7 @@ function GithubBox(props) {
         >
           <Button
             sx={{
-              background: "#00bf63",
+              background: "rgb(102, 204, 153)",
               padding: "10px 30px",
               fontFamily: "Montserrat",
               fontWeight: 300,
@@ -73,6 +73,7 @@ function GithubBox(props) {
               borderRadius: 20,
               animation: `${pulse} 2s infinite`,
               marginTop: "20px",
+              color: `${isLightMode ? "#000" : "aliceblue"}`,
             }}
             variant="contained"
             href="https://github.com/DamianMan"

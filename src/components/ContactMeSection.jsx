@@ -23,7 +23,7 @@ const info = [
     icon: (
       <IconButton>
         {" "}
-        <HomeIcon sx={{ color: "#00bf63", mr: 1, my: 0.5 }} />
+        <HomeIcon color="primary" sx={{ mr: 1, my: 0.5 }} />
       </IconButton>
     ),
     text: "Via G. Cobellis, n° 16, 84078",
@@ -32,7 +32,7 @@ const info = [
     icon: (
       <IconButton>
         {" "}
-        <PlaceIcon sx={{ color: "#00bf63", mr: 1, my: 0.5 }} />
+        <PlaceIcon color="primary" sx={{ mr: 1, my: 0.5 }} />
       </IconButton>
     ),
     text: "Vallo della Lucania, Salerno, Italy",
@@ -40,7 +40,7 @@ const info = [
   {
     icon: (
       <IconButton href="mailto:damianomanzillo@yahoo.com">
-        <AlternateEmailIcon sx={{ color: "#00bf63", mr: 1, my: 0.5 }} />
+        <AlternateEmailIcon color="primary" sx={{ mr: 1, my: 0.5 }} />
       </IconButton>
     ),
     text: "damianomanzillo@yahoo.com",
@@ -48,7 +48,7 @@ const info = [
   {
     icon: (
       <IconButton href="tel:+393928309592">
-        <PhoneIcon sx={{ color: "#00bf63", mr: 1, my: 0.5 }} />
+        <PhoneIcon color="primary" sx={{ mr: 1, my: 0.5 }} />
       </IconButton>
     ),
     text: "+39 392 8309592",
@@ -56,7 +56,7 @@ const info = [
   {
     icon: (
       <IconButton href="https://www.linkedin.com/in/damiano-manzillo-787344259/">
-        <LinkedInIcon sx={{ color: "#00bf63", mr: 1, my: 0.5 }} />
+        <LinkedInIcon color="primary" sx={{ mr: 1, my: 0.5 }} />
       </IconButton>
     ),
     text: "LinkedIn",
@@ -67,7 +67,7 @@ const Title = styled(Typography)(({ theme }) => ({
   letterSpacing: 3,
   fontWeight: 100,
   textAlign: "center",
-  color: "#00bf63",
+  color: "rgb(104, 195, 163)",
   fontFamily: "Roboto, san-serif",
   boxShadow: "3px 3px 10px grey",
   fontSize: 30,
@@ -88,6 +88,7 @@ function ContactMeSection({ isLightMode }) {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  console.log(isLightMode);
 
   const handleFullName = (text) => {
     setFullName(text.target.value);
@@ -145,7 +146,7 @@ function ContactMeSection({ isLightMode }) {
                   type="text"
                   value={fullName}
                   onChange={handleFullName}
-                  color="success"
+                  color="primary"
                   focused
                   required
                 />
@@ -161,7 +162,7 @@ function ContactMeSection({ isLightMode }) {
                   type="email"
                   value={email}
                   onChange={handleEmail}
-                  color="success"
+                  color="primary"
                   focused
                   required
                 />
@@ -182,7 +183,7 @@ function ContactMeSection({ isLightMode }) {
                   value={message}
                   variant="filled"
                   onChange={handleMessage}
-                  color="success"
+                  color="primary"
                   focused
                   required
                 />
@@ -231,13 +232,13 @@ function ContactMeSection({ isLightMode }) {
                       sx={{
                         "& .MuiInputLabel-root": {
                           fontFamily: "Montserrat", // Apply font family to the label
-                          color: isLightMode ? "grey" : "aliceblue",
+                          color: isLightMode ? "grey" : "snow",
                         },
                         label: {
-                          color: isLightMode ? "grey" : "aliceblue",
+                          color: isLightMode ? "grey" : "snow",
                         },
                         input: {
-                          color: isLightMode ? "grey" : "aliceblue",
+                          color: isLightMode ? "grey" : "snow",
                         },
 
                         width: { xs: "100%", md: "50%", lg: "50%" },
@@ -260,8 +261,8 @@ function ContactMeSection({ isLightMode }) {
               variant="contained"
               sx={{
                 width: { xs: "50%", md: "10%" },
-                background: "#00bf63",
-                color: "aliceblue",
+                background: "rgb(104, 195, 163)",
+                color: `${isLightMode ? "#000" : "aliceblue"}`,
                 borderRadius: "16px",
               }}
               type="submit"

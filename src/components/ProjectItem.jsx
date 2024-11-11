@@ -45,7 +45,7 @@ function ProjectItem({ item }) {
           maxWidth: "95%",
           borderRadius: 5,
           background: "transparent",
-          boxShadow: `3px 3px 10px ${green[200]}`,
+          boxShadow: `3px 3px 10px rgb(102, 204, 153)`,
         }}
       >
         <CardHeader
@@ -94,7 +94,10 @@ function ProjectItem({ item }) {
                 key={technology + i}
                 variant="outlined"
                 label={technology}
-                sx={{ color: "#00bf63", border: "1px solid #00bf63" }}
+                sx={{
+                  color: "rgb(104, 195, 163)",
+                  border: "1px solid rgb(104, 195, 163)",
+                }}
               />
             ))}
           </Box>

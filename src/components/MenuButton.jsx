@@ -49,7 +49,7 @@ export default function OpenIconSpeedDial() {
         ariaLabel="SpeedDial tooltip example"
         sx={{
           "& .MuiSpeedDial-root": {
-            backgroundColor: "#00bf63", // Customize the background of the SpeedDial button
+            backgroundColor: "rgb(102, 204, 153)", // Customize the background of the SpeedDial button
             "&:hover": {
               backgroundColor: "#00a653", // Customize hover background color
             },
@@ -59,7 +59,7 @@ export default function OpenIconSpeedDial() {
           sx: {
             boxShadow: "none",
             backgroundColor: "transparent",
-            color: "#00bf63", // Replace with your desired color
+            color: "rgb(102, 204, 153)", // Replace with your desired color
             "&:hover": {
               backgroundColor: "transparent",
             },
@@ -99,7 +99,7 @@ export default function OpenIconSpeedDial() {
           sx: {
             boxShadow: "none",
             backgroundColor: "transparent",
-            color: "#00bf63", // Replace with your desired color
+            color: "rgb(102, 204, 153)", // Replace with your desired color
             "&:hover": {
               backgroundColor: "transparent",
 
@@ -120,7 +120,7 @@ export default function OpenIconSpeedDial() {
           left: 0,
 
           "& .MuiSpeedDial-root": {
-            backgroundColor: "#00bf63", // Customize the background of the SpeedDial button
+            backgroundColor: "rgb(102, 204, 153)", // Customize the background of the SpeedDial button
             "&:hover": {
               backgroundColor: "#00a653", // Customize hover background color
             },

@@ -7,7 +7,7 @@ import { keyframes } from "@emotion/react";
 const pulse = keyframes`  
  
 0% {
- box-shadow: 0 0 0 0 ${green[400]};
+ box-shadow: 0 0 0 0 rgb(102, 204, 153));
 }
 
 70% {
@@ -20,25 +20,29 @@ const pulse = keyframes`
 
 `;
 
-export default function HomePageBtn({ text }) {
+export default function HomePageBtn({ text, isLightMode }) {
   return (
     <Stack sx={{ margin: "30px 0px" }}>
       <Button
         sx={{
-          background: "#00bf63",
+          background: "rgb(102, 204, 153)",
           padding: "10px 30px",
           fontFamily: "Montserrat",
           fontWeight: 300,
           fontSize: 20,
           borderRadius: 20,
           animation: `${pulse} 2s infinite`,
+          color: `${isLightMode ? "#000" : "aliceblue"}`,
         }}
         variant="contained"
         component="a"
         href="#skills"
       >
         {text}
-        <ArrowCircleDownIcon fontSize="large" sx={{ ml: 1 }} />
+        <ArrowCircleDownIcon
+          fontSize="large"
+          sx={{ ml: 1, color: `${isLightMode ? "#000" : "aliceblue"}` }}
+        />
       </Button>
     </Stack>
   );

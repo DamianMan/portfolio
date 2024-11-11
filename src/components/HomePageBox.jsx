@@ -22,7 +22,7 @@ const Image = styled("img")(({ theme }) => ({
   height: 200,
   objectFit: "cover",
   borderRadius: 10,
-  boxShadow: "5px 5px 10px grey",
+  boxShadow: "5px 5px 10px rgb(102, 204, 153)",
 }));
 
 const FullStackText = styled(Typography)(({ theme }) => ({
@@ -76,7 +76,7 @@ function HomePageBox({ isLightMode }) {
           >
             Check out my projects here and on{" "}
             <Link
-              sx={{ textDecoration: "none", color: "#00bf63" }}
+              sx={{ textDecoration: "none", color: "rgb(102, 204, 153)" }}
               href="https://github.com/DamianMan"
             >
               GitHub.
@@ -84,7 +84,7 @@ function HomePageBox({ isLightMode }) {
             <br />
             Connect with me on{" "}
             <Link
-              sx={{ textDecoration: "none", color: "#00bf63" }}
+              sx={{ textDecoration: "none", color: "rgb(102, 204, 153)" }}
               href="https://www.linkedin.com/in/damiano-manzillo-787344259/"
             >
               LinkedIn.

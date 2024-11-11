@@ -8,7 +8,7 @@ function Footer(props) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: "#00bf63",
+        background: "rgb(102, 204, 153)",
         padding: "10px 0",
       }}
     >

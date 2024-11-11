@@ -9,7 +9,7 @@ const Title = styled(Typography)(({ theme }) => ({
   letterSpacing: 3,
   textAlign: "center",
   fontWeight: 100,
-  color: "#00bf63",
+  color: "rgb(104, 195, 163)",
   fontFamily: "Roboto, san-serif",
   boxShadow: "3px 3px 10px grey",
   fontSize: 30,

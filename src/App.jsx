@@ -19,6 +19,11 @@ const theme = createTheme({
     fontFamily: "Roboto, san-serif",
     fontWeight: 200,
   },
+  palette: {
+    primary: {
+      main: "rgb(102, 204, 153)", // Default blue
+    },
+  },
 });
 
 const Main = styled("div")(({ theme }) => ({
@@ -33,7 +38,7 @@ const Main = styled("div")(({ theme }) => ({
 
 const BoxTitle = styled(Box)(({ theme }) => ({
   backgroundColor: "#fff",
-  boxShadow: "5px 5px 10px 0px #00bf63",
+  boxShadow: "5px 5px 10px 0px rgb(102, 204, 153)",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -129,14 +134,14 @@ function App() {
                   <HomePageBox isLightMode={isLightMode} />
                 </BoxTitle>
 
-                <HomePageBtn text={"Explore"} />
+                <HomePageBtn text={"Explore"} isLightMode={isLightMode} />
               </ContainerIntro>
             </Fade>
 
             <Blank />
             <SkillsSection />
             <Blank />
-            <ProjectsSection />
+            <ProjectsSection isLightMode={isLightMode} />
             <Blank />
             <ContactMeSection isLightMode={isLightMode} />
             <Blank />
