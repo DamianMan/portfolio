@@ -30,8 +30,14 @@ function ProjectsSection(props) {
   const inView = useInView(container, { once: true });
   return (
     <>
-      <Slide ref={container} in={inView} direction="down" timeout={3000}>
-        <Title id="projects">Projects</Title>
+      <Slide
+        id="projects"
+        ref={container}
+        in={inView}
+        direction="down"
+        timeout={3000}
+      >
+        <Title>Projects</Title>
       </Slide>
 
       <Stack

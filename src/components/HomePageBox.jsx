@@ -37,13 +37,9 @@ const FullStackText = styled(Typography)(({ theme }) => ({
 }));
 
 const IntroText = styled(Typography)(({ theme }) => ({
-  fontSize: 16,
   fontFamily: "Montserrat",
   fontWeight: 300,
   color: "darkgrey",
-  [theme.breakpoints.up("sm")]: {
-    fontSize: 18,
-  },
 }));
 
 const Containers = styled(Box)(({ theme }) => ({
@@ -58,7 +54,6 @@ const Containers = styled(Box)(({ theme }) => ({
   },
 }));
 function HomePageBox({ isLightMode }) {
-  console.log(meAi);
   return (
     <Main>
       <Fade in={true} timeout={4000}>
@@ -75,28 +70,33 @@ function HomePageBox({ isLightMode }) {
             margin: "5% 10%",
           }}
         >
-          <IntroText align="left">
-            Welcome There! Check out my portfolio here, my projects on{" "}
+          <IntroText
+            align="left"
+            sx={{ color: "gray", fontWeight: 400, fontSize: 18 }}
+          >
+            Check out my projects here and on{" "}
             <Link
               sx={{ textDecoration: "none", color: "#00bf63" }}
               href="https://github.com/DamianMan"
             >
-              GitHub
+              GitHub.
             </Link>
-            , and connect with me on{" "}
+            <br />
+            Connect with me on{" "}
             <Link
               sx={{ textDecoration: "none", color: "#00bf63" }}
               href="https://www.linkedin.com/in/damiano-manzillo-787344259/"
             >
-              LinkedIn
+              LinkedIn.
             </Link>
-            .
           </IntroText>
           <br></br>
-          <IntroText align="left">
-            This is my showcase where you can see what means transitioning from
-            the world of professional football to the dynamic landscape of
-            technology.
+          <IntroText align="left" sx={{ fontSize: 14 }}>
+            Welcome to my portfolio—a reflection of a journey that began in my
+            family's sportswear business, where I learned the values of hard
+            work, precision, and customer focus. Today, I apply those same
+            principles in the tech world, crafting seamless, user-centered
+            solutions.
           </IntroText>
         </Containers>
       </Fade>

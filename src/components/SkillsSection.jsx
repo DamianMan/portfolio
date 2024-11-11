@@ -14,13 +14,13 @@ const Title = styled(Typography)(({ theme }) => ({
   boxShadow: "3px 3px 10px grey",
   fontSize: 30,
   borderRadius: 10,
-  width: "25%",
+  width: "45%",
   padding: "0px 10px",
 
   margin: "30px 10px",
   [theme.breakpoints.up("sm")]: {
     letterSpacing: 7,
-    width: "15%",
+    width: "20%",
   },
 }));
 
@@ -46,11 +46,11 @@ function SkillsSection(props) {
   const isInView = useInView(container, { once: true });
   return (
     <Stack
-      id="skills"
+      id="about"
       sx={{ display: "flex", flexDirection: "column", width: "100%" }}
     >
       <Slide ref={container} in={isInView} direction="left" timeout={3000}>
-        <Title>Skills</Title>
+        <Title>About Me</Title>
       </Slide>
 
       <Box>
@@ -91,7 +91,15 @@ function SkillsSection(props) {
           </Description>
         </Slide>
       </Box>
-
+      <Slide
+        id="skills"
+        ref={container}
+        in={isInView}
+        direction="left"
+        timeout={3000}
+      >
+        <Title>Teck Skills</Title>
+      </Slide>
       <SkillImageList />
     </Stack>
   );

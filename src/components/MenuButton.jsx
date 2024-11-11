@@ -10,10 +10,11 @@ import CloseIcon from "@mui/icons-material/Close";
 import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import SegmentTwoToneIcon from "@mui/icons-material/SegmentTwoTone";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import pdf from "../assets/resume.pdf";
+import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import { Backdrop } from "@mui/material";
 
 const actions = [
+  { icon: <AccountBoxIcon />, name: "About", href: "#about" },
   { icon: <BlurLinearIcon />, name: "Skills", href: "#skills" },
   { icon: <AutoAwesomeMotionIcon />, name: "Projects", href: "#projects" },
   {
@@ -42,7 +43,7 @@ export default function OpenIconSpeedDial() {
         right: 5,
       }}
     >
-      <Backdrop open={open} />
+      <Backdrop open={open} onClick={handleClick} />
       <SpeedDial
         direction="down"
         ariaLabel="SpeedDial tooltip example"
