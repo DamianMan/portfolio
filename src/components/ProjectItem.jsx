@@ -106,10 +106,10 @@ function ProjectItem({ item }) {
             />
           </IconButton>
           <IconButton href={item.website}>
-            <InsertLinkIcon sx={{ color: "darkgrey" }} />
+            <InsertLinkIcon color="primary" />
           </IconButton>
           <IconButton href={item.github}>
-            <GitHubIcon sx={{ color: "darkgrey" }} />
+            <GitHubIcon sx={{ color: "black" }} />
           </IconButton>
 
           <IconButton onClick={handleLines}>
