@@ -25,7 +25,7 @@ const Title = styled(Typography)(({ theme }) => ({
   },
 }));
 
-function ProjectsSection(props) {
+function ProjectsSection({ isLightMode }) {
   const container = useRef();
   const inView = useInView(container, { once: true });
   return (
@@ -67,7 +67,7 @@ function ProjectsSection(props) {
           ))}
         </Grid>
       </Stack>
-      <GithubBox />
+      <GithubBox isisLightMode={isLightMode} />
     </>
   );
 }

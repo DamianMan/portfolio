@@ -114,7 +114,7 @@ function ContactMeSection({ isLightMode }) {
   };
   return (
     <>
-      <Collapse ref={container} in={inView} timeout={6000} collapsedSize={30}>
+      <Collapse ref={container} in={inView} timeout={4000} collapsedSize={30}>
         <Title id="connect">Connect</Title>
         <Typography align="center" fontFamily={"Montserrat"} color="grey">
           Please leave me a message and I will get in touch with you 💬

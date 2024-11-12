@@ -117,9 +117,9 @@ function App() {
           <CircularProgress
             size={80}
             sx={{
-              color: "#00bf63",
+              color: "rgb(102, 204, 153)",
               alignSelf: "center",
-              marginTop: { xs: "70%", md: "25%", lg: "25%" },
+              marginTop: { xs: "80%", md: "35%", lg: "35%" },
             }}
           />
         ) : (

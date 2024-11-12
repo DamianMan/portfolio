@@ -44,8 +44,8 @@ const IntroText = styled(Typography)(({ theme }) => ({
 
 const Containers = styled(Box)(({ theme }) => ({
   display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  justifyContent: "flex-start",
+  alignItems: "flex-start",
   flexDirection: "column",
   margin: "0% 10%",
 
@@ -72,7 +72,11 @@ function HomePageBox({ isLightMode }) {
         >
           <IntroText
             align="left"
-            sx={{ color: "gray", fontWeight: 400, fontSize: 18 }}
+            sx={{
+              color: "gray",
+              fontWeight: 400,
+              fontSize: 18,
+            }}
           >
             Check out my projects here and on{" "}
             <Link

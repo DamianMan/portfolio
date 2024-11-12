@@ -39,6 +39,7 @@ export default function SkillImageList() {
         boxShadow: "0 4px 30px grey",
         borderRadius: "16px",
         background: "transparent",
+        margin: "30px 10px",
       }}
     >
       {skills.map((item) => (

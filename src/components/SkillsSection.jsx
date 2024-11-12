@@ -54,22 +54,12 @@ function SkillsSection(props) {
       </Slide>
 
       <Box>
-        <Slide in={isInView} timeout={3000} direction="left">
-          <Description>
-            I grew up in my family’s sportswear business, where I gained
-            hands-on experience in sales and customer relations. I spent my days
-            connecting with clients, learning their preferences, and making sure
-            they found exactly what they were looking for. This role was more
-            than just selling; it was about building relationships and
-            understanding the value of customer trust.
-          </Description>
-        </Slide>
         <Slide in={isInView} timeout={3000} direction="right">
           <Description>
-            But my inner attraction and strong passion to the world of
-            technology led me to discover and be more and more amazed by this
-            amazing environment: below are just some the skills I gained during
-            my new career.
+            I always had an inner attraction and strong passion to the world of
+            technology which led me to discover and be more and more amazed by
+            this fanstatic environment: below are just some the skills I gained
+            during my career.
           </Description>
         </Slide>
         <Slide in={isInView} timeout={3000} direction="left">
@@ -98,7 +88,7 @@ function SkillsSection(props) {
         direction="left"
         timeout={3000}
       >
-        <Title>Teck Skills</Title>
+        <Title>Skills</Title>
       </Slide>
       <SkillImageList />
     </Stack>
