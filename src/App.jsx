@@ -5,7 +5,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CircularProgress from "@mui/material/CircularProgress";
 import meOpacity from "./assets/meOpacity.jpg";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
-import { grey } from "@mui/material/colors";
+import { grey, blue } from "@mui/material/colors";
 import { useState, useEffect } from "react";
 import HomePageBox from "./components/HomePageBox";
 import HomePageBtn from "./components/HomePageBtn";
@@ -22,6 +22,9 @@ const theme = createTheme({
   palette: {
     primary: {
       main: "rgb(102, 204, 153)", // Default blue
+    },
+    link: {
+      main: `#006BFF`,
     },
   },
 });

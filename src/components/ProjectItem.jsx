@@ -109,7 +109,7 @@ function ProjectItem({ item }) {
             />
           </IconButton>
           <IconButton href={item.website}>
-            <InsertLinkIcon color="primary" />
+            <InsertLinkIcon color="link" />
           </IconButton>
           <IconButton href={item.github}>
             <GitHubIcon sx={{ color: "black" }} />
