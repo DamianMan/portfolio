@@ -13,7 +13,7 @@ const skills = [
   },
   {
     name: "NODE",
-    url: "http://pluspng.com/img-png/nodejs-logo-png-nice-images-collection-node-js-desktop-wallpapers-370.png",
+    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/220px-Node.js_logo.svg.png",
   },
   {
     name: "EXPRESS",
