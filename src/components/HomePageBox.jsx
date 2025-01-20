@@ -58,7 +58,7 @@ function HomePageBox({ isLightMode }) {
     <Main>
       <Fade in={true} timeout={4000}>
         <Containers>
-          <FullStackText>Junior Full </FullStackText>
+          <FullStackText>Full </FullStackText>
           <FullStackText>Stack Developer</FullStackText>
         </Containers>
       </Fade>
@@ -96,11 +96,12 @@ function HomePageBox({ isLightMode }) {
           </IntroText>
           <br></br>
           <IntroText align="left" sx={{ fontSize: 14 }}>
-            Welcome to my portfolio—a reflection of a journey that began in my
-            family's sportswear business, where I learned the values of hard
-            work, precision, and customer focus. Today, I apply those same
-            principles in the tech world, crafting seamless, user-centered
-            solutions.
+            Welcome to my portfolio! I’m a passionate full-stack developer
+            dedicated to creating seamless, user-focused solutions for web and
+            mobile platforms. With a strong foundation in frontend and backend
+            technologies, I strive to deliver intuitive, scalable, and
+            high-performing digital experiences. Explore my projects and see
+            what I bring to the table!
           </IntroText>
         </Containers>
       </Fade>
