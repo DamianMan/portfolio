@@ -28,8 +28,8 @@ const projectsData = [
   },
   {
     name: "Mobile App",
-    website: "https://github.com/DamianMan/blue-soul",
-    github: "https://github.com/DamianMan/blue-soul",
+    website: "https://github.com/DamianMan/mobile-app",
+    github: "https://github.com/DamianMan/mobile-app",
     image: mobileApp,
     description:
       "I developed a mobile application using React Native, designed to provide an intuitive and seamless user experience. The app is powered by a robust backend built with Node.js, Express, and MongoDB, utilizing RESTful APIs for efficient data handling and communication between the frontend and backend. Firebase Authentication ensures secure user access, while Expo and Expo Notifications provide real-time updates and alerts. Currently in the testing phase, the app is almost ready for deployment, with a focus on delivering a high-quality, secure, and engaging user experience.",
