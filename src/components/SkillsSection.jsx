@@ -4,6 +4,8 @@ import SkillImageList from "./SkillImagesList";
 import { styled, Box } from "@mui/material";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Lottie from "lottie-react";
+import LottieAboutMe from "../assets/animations/about-me2.json";
 
 const Title = styled(Typography)(({ theme }) => ({
   letterSpacing: 3,
@@ -41,46 +43,69 @@ const Description = styled(Typography)(({ theme }) => ({
   },
 }));
 
+const ResBox = styled("Box")(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "flex-start",
+  flexDirection: "column",
+  [theme.breakpoints.up("sm")]: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+}));
+
 function SkillsSection(props) {
   const container = useRef();
   const isInView = useInView(container, { once: true });
   return (
     <Stack
       id="about"
-      sx={{ display: "flex", flexDirection: "column", width: "100%" }}
+      sx={{
+        display: "flex",
+
+        flexDirection: "column",
+        width: "100%",
+      }}
     >
       <Slide ref={container} in={isInView} direction="left" timeout={3000}>
         <Title>About Me</Title>
       </Slide>
+      <ResBox>
+        <Box>
+          <Slide in={isInView} timeout={3000} direction="right">
+            <Description>
+              I always had an inner attraction and strong passion to the world
+              of technology which led me to discover and be more and more amazed
+              by this fanstatic environment: below are just some the skills I
+              gained during my career.
+            </Description>
+          </Slide>
+          <Slide in={isInView} timeout={3000} direction="left">
+            <Description>
+              My love for mobile apps development brought me to expand my
+              studies to React Native, which is my current and main goal to
+              accomplish: actually I'm almost in a release phase for a mobile
+              app (check the project on GitHub).
+            </Description>
+          </Slide>
+          <Slide in={isInView} timeout={3000} direction="right">
+            <Description>
+              Every successful mobile or web app relies on a strong, efficient
+              backend. To master this, I expanded my expertise to building
+              robust systems with RESTful APIs. My journey took me through
+              Django, Flask, Node, and Express, where I developed projects that
+              showcase my ability to manage both SQL and NoSQL databases, while
+              designing scalable and dynamic web services.
+            </Description>
+          </Slide>
+        </Box>
+        <Slide in={isInView} timeout={3000} direction="right">
+          <Box sx={{ marginRight: "3%" }}>
+            <Lottie animationData={LottieAboutMe} />
+          </Box>
+        </Slide>
+      </ResBox>
 
-      <Box>
-        <Slide in={isInView} timeout={3000} direction="right">
-          <Description>
-            I always had an inner attraction and strong passion to the world of
-            technology which led me to discover and be more and more amazed by
-            this fanstatic environment: below are just some the skills I gained
-            during my career.
-          </Description>
-        </Slide>
-        <Slide in={isInView} timeout={3000} direction="left">
-          <Description>
-            My love for mobile apps development brought me to expand my studies
-            to React Native, which is my current and main goal to accomplish:
-            actually I'm almost in a release phase for a mobile app (check the
-            project on GitHub).
-          </Description>
-        </Slide>
-        <Slide in={isInView} timeout={3000} direction="right">
-          <Description>
-            Every successful mobile or web app relies on a strong, efficient
-            backend. To master this, I expanded my expertise to building robust
-            systems with RESTful APIs. My journey took me through Django, Flask,
-            Node, and Express, where I developed projects that showcase my
-            ability to manage both SQL and NoSQL databases, while designing
-            scalable and dynamic web services.
-          </Description>
-        </Slide>
-      </Box>
       <Slide
         id="skills"
         ref={container}

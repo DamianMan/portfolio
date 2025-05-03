@@ -58,8 +58,11 @@ function HomePageBox({ isLightMode }) {
     <Main>
       <Fade in={true} timeout={4000}>
         <Containers>
-          <FullStackText>Full </FullStackText>
-          <FullStackText>Stack Developer</FullStackText>
+          <FullStackText>Full</FullStackText>
+          <FullStackText>Stack</FullStackText>
+          <FullStackText style={{ color: "rgb(102, 204, 153)" }}>
+            Developer
+          </FullStackText>
         </Containers>
       </Fade>
       <Fade in={true} timeout={6000}>
